@@ -7,14 +7,14 @@ const output = fs.createWriteStream(filePath);
 const rl = readline.createInterface(process.stdin, process.stdout);
 
 rl.question('Write your text...\n', text => {
-  if (text === 'exit') {
+  if (text.trim() === 'exit') {
     rl.close();
   } else {
     output.write(text);
   }
 
   rl.on('line', input => {
-    if (input === 'exit') {
+    if (input.trim() === 'exit') {
       rl.close();
     } else {
       output.write(input);
