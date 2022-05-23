@@ -20,8 +20,8 @@ rl.question('Write your text...\n', text => {
       output.write(input);
     }
   });
+});
 
-  rl.on('close', () => {
-    console.log('Bye!');
-  });
+rl.on('close', () => {
+  console.log('Bye!');
 });
